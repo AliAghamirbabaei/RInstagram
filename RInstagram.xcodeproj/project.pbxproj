@@ -10,6 +10,9 @@
 		302B8A3F280CB90A00D7ED9E /* RInstagramApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302B8A3E280CB90A00D7ED9E /* RInstagramApp.swift */; };
 		302B8A43280CB90D00D7ED9E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 302B8A42280CB90D00D7ED9E /* Assets.xcassets */; };
 		302B8A46280CB90D00D7ED9E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 302B8A45280CB90D00D7ED9E /* Preview Assets.xcassets */; };
+		302B8A4D280CB95600D7ED9E /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302B8A4C280CB95600D7ED9E /* HomeView.swift */; };
+		302B8A52280CC3F700D7ED9E /* Quicksand-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 302B8A50280CC3F700D7ED9E /* Quicksand-Regular.ttf */; };
+		302B8A53280CC3F700D7ED9E /* Quicksand-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 302B8A51280CC3F700D7ED9E /* Quicksand-Bold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -17,6 +20,10 @@
 		302B8A3E280CB90A00D7ED9E /* RInstagramApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RInstagramApp.swift; sourceTree = "<group>"; };
 		302B8A42280CB90D00D7ED9E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		302B8A45280CB90D00D7ED9E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		302B8A4C280CB95600D7ED9E /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		302B8A50280CC3F700D7ED9E /* Quicksand-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Regular.ttf"; sourceTree = "<group>"; };
+		302B8A51280CC3F700D7ED9E /* Quicksand-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Bold.ttf"; sourceTree = "<group>"; };
+		302B8A54280CC40700D7ED9E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,8 +56,11 @@
 		302B8A3D280CB90A00D7ED9E /* RInstagram */ = {
 			isa = PBXGroup;
 			children = (
+				302B8A54280CC40700D7ED9E /* Info.plist */,
 				302B8A3E280CB90A00D7ED9E /* RInstagramApp.swift */,
+				302B8A4E280CB95800D7ED9E /* View */,
 				302B8A42280CB90D00D7ED9E /* Assets.xcassets */,
+				302B8A4F280CC3E800D7ED9E /* Fonts */,
 				302B8A44280CB90D00D7ED9E /* Preview Content */,
 			);
 			path = RInstagram;
@@ -62,6 +72,23 @@
 				302B8A45280CB90D00D7ED9E /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		302B8A4E280CB95800D7ED9E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				302B8A4C280CB95600D7ED9E /* HomeView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		302B8A4F280CC3E800D7ED9E /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				302B8A51280CC3F700D7ED9E /* Quicksand-Bold.ttf */,
+				302B8A50280CC3F700D7ED9E /* Quicksand-Regular.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -123,7 +150,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				302B8A46280CB90D00D7ED9E /* Preview Assets.xcassets in Resources */,
+				302B8A52280CC3F700D7ED9E /* Quicksand-Regular.ttf in Resources */,
 				302B8A43280CB90D00D7ED9E /* Assets.xcassets in Resources */,
+				302B8A53280CC3F700D7ED9E /* Quicksand-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,6 +164,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				302B8A3F280CB90A00D7ED9E /* RInstagramApp.swift in Sources */,
+				302B8A4D280CB95600D7ED9E /* HomeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,6 +298,7 @@
 				DEVELOPMENT_TEAM = N4Y99Y6PT4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = RInstagram/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -297,6 +328,7 @@
 				DEVELOPMENT_TEAM = N4Y99Y6PT4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = RInstagram/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
