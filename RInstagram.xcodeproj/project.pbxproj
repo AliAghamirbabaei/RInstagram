@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		302B8A3F280CB90A00D7ED9E /* RInstagramApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302B8A3E280CB90A00D7ED9E /* RInstagramApp.swift */; };
-		302B8A41280CB90A00D7ED9E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302B8A40280CB90A00D7ED9E /* ContentView.swift */; };
 		302B8A43280CB90D00D7ED9E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 302B8A42280CB90D00D7ED9E /* Assets.xcassets */; };
 		302B8A46280CB90D00D7ED9E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 302B8A45280CB90D00D7ED9E /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -16,7 +15,6 @@
 /* Begin PBXFileReference section */
 		302B8A3B280CB90A00D7ED9E /* RInstagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RInstagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		302B8A3E280CB90A00D7ED9E /* RInstagramApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RInstagramApp.swift; sourceTree = "<group>"; };
-		302B8A40280CB90A00D7ED9E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		302B8A42280CB90D00D7ED9E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		302B8A45280CB90D00D7ED9E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -52,7 +50,6 @@
 			isa = PBXGroup;
 			children = (
 				302B8A3E280CB90A00D7ED9E /* RInstagramApp.swift */,
-				302B8A40280CB90A00D7ED9E /* ContentView.swift */,
 				302B8A42280CB90D00D7ED9E /* Assets.xcassets */,
 				302B8A44280CB90D00D7ED9E /* Preview Content */,
 			);
@@ -137,7 +134,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				302B8A41280CB90A00D7ED9E /* ContentView.swift in Sources */,
 				302B8A3F280CB90A00D7ED9E /* RInstagramApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
