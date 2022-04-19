@@ -10,11 +10,14 @@ import SwiftUI
 @main
 struct RInstagramApp: App {
     
-    init() { UINavigationBar.appearance().titleTextAttributes = [.font : UIFont(name: "Quicksand-Bold", size: 24)!] }
+    init() {
+        UINavigationBar.appearance().titleTextAttributes = [.font : UIFont(name: "Quicksand-Bold", size: 24)!]
+    }
     
     var body: some Scene {
         WindowGroup {
             HomeView()
+                .environmentObject(HomeViewModel())
         }
     }
 }
