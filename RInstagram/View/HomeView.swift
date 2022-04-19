@@ -8,16 +8,32 @@
 import SwiftUI
 
 struct HomeView: View {
+    @EnvironmentObject var viewModel: HomeViewModel
+    @State private var dotSize: CGFloat = 0.0
+    @State private var isReversed: Bool = false
+    private let timer = Timer.publish(every: 0.2, on: .main, in: .common).autoconnect()
+    
     var body: some View {
         NavigationView {
             ZStack {
                 Color("BG")
+                    .ignoresSafeArea()
                 
-                ScrollView {
+                ScrollView(showsIndicators: false) {
+                    StoryView(viewModel: viewModel)
                     
+                    // MARK: - Line
+                    GeometryReader { proxy in
+                        let size = proxy.size
+                        
+                        Rectangle()
+                            .stroke(.black.opacity(0.5), lineWidth: 0.22)
+                            .frame(width: size.width, height: 1)
+                    }
+                    
+                    PostView(viewModel: viewModel)
                 }
             }
-            .ignoresSafeArea()
             .navigationTitle("Instagram")
             .navigationBarTitleDisplayMode(.inline)
             // MARK: - Tabbar items
@@ -37,13 +53,43 @@ struct HomeView: View {
                     Button {
                         // Open Camera
                     } label: {
-                        Image("Message")
-                            .resizable()
-                            .frame(width: 30, height: 30)
-                            .padding(.trailing, 5)
+                        ZStack {
+                            Image("Message")
+                                .resizable()
+                                .frame(width: 30, height: 30)
+                                .padding(.trailing, 5)
+                            
+                            Circle()
+                                .fill(Color("Pink"))
+                                .frame(width: dotSize, height: dotSize)
+                                .offset(x: 8, y: -10)
+                                .onReceive(timer) { _ in
+                                    dotAnimation()
+                                }
+                        }
                     }
                 }
             }
+        }
+    }
+    
+    private func dotAnimation() {
+        if isReversed {
+            withAnimation {
+                dotSize -= 1
+            }
+        } else {
+            withAnimation {
+                dotSize += 1
+            }
+        }
+        
+        if dotSize > 7 {
+            isReversed = true
+        }
+        
+        if dotSize < 1{
+            isReversed = false
         }
     }
 }
@@ -52,7 +98,8 @@ struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
             HomeView()
-            // .preferredColorScheme(.dark)
+                .environmentObject(HomeViewModel())
+            //.preferredColorScheme(.dark)
         }
     }
 }
