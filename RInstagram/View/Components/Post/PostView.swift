@@ -13,7 +13,7 @@ struct PostView: View {
     var body: some View {
         VStack {
             ForEach(viewModel.posts, id: \.id) { post in
-                PostsView(post: post, user: mockedUsers)
+                PostsView(post: post, user: mockedUsers, randomUser: viewModel.getRandomUser())
                     .padding(.bottom)
             }
         }
