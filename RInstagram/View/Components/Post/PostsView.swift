@@ -8,9 +8,12 @@
 import SwiftUI
 
 struct PostsView: View {
+    @Environment(\.colorScheme) var colorScheme
     @State private var isLiked: Bool = false
+    @State private var isBookmarked: Bool = false
     var post: Post
     var user: [User]
+    var randomUser: [User]
     
     var body: some View {
         VStack {
@@ -28,7 +31,7 @@ struct PostsView: View {
                     
                     Text(user[post.userID].location)
                         .font(.fontUtil(.regular, size: 18))
-                        .foregroundColor(.black.opacity(0.8))
+                        .foregroundColor(colorScheme == .light ? .black.opacity(0.8) : .gray)
                 }
                 
                 Spacer()
@@ -36,9 +39,9 @@ struct PostsView: View {
                 Button{
                     // More action
                 } label: {
-                    Image("More")
+                    Image(colorScheme == .light ? "More" : "MoreDark")
                         .resizable()
-                        .frame(width: 25, height: 25)
+                        .frame(width: 60, height: 60)
                 }
             }
             .padding(.horizontal)
@@ -66,23 +69,29 @@ struct PostsView: View {
                 Button{
                     isLiked.toggle()
                 } label: {
-                    Image(isLiked ? "RedHeart" : "Heart")
-                        .resizable()
-                        .frame(width: 30, height: 30)
+                    if colorScheme == .light {
+                        Image(isLiked ? "RedHeart" : "Heart")
+                            .resizable()
+                            .frame(width: 30, height: 30)
+                    } else {
+                        Image(isLiked ? "RedHeart" : "HeartDark")
+                            .resizable()
+                            .frame(width: 30, height: 30)
+                    }
                 }
                 
                 Button{
                     
                 } label: {
-                    Image("Comment")
+                    Image(colorScheme == .light ? "Comment" : "CommentDark")
                         .resizable()
-                        .frame(width: 30, height: 30)
+                        .frame(width: 30, height: 28)
                 }
                 
                 Button{
                     
                 } label: {
-                    Image("Send")
+                    Image(colorScheme == .light ? "Send" : "SendDark")
                         .resizable()
                         .frame(width: 30, height: 30)
                 }
@@ -90,11 +99,17 @@ struct PostsView: View {
                 Spacer()
                 
                 Button{
-                    
+                    isBookmarked.toggle()
                 } label: {
-                    Image("Bookmark")
-                        .resizable()
-                        .frame(width: 30, height: 30)
+                    if colorScheme == .light {
+                        Image(isBookmarked ? "BookmarkFill" : "Bookmark")
+                            .resizable()
+                            .frame(width: 30, height: 30)
+                    } else {
+                        Image(isBookmarked ? "BookmarkFillDark" : "BookmarkDark")
+                            .resizable()
+                            .frame(width: 30, height: 30)
+                    }
                 }
             }
             .padding(.top, 20)
@@ -103,20 +118,20 @@ struct PostsView: View {
             // MARK: - Post insights
             HStack {
                 ZStack {
-                    Image(user[(0...9).randomElement()!].profilePicture)
+                    Image(randomUser[0].profilePicture)
                         .resizable()
                         .scaledToFill()
                         .frame(width: 30, height: 30)
                         .cornerRadius(7)
                     
-                    Image(user[(0...9).randomElement()!].profilePicture)
+                    Image(randomUser[1].profilePicture)
                         .resizable()
                         .scaledToFill()
                         .frame(width: 30, height: 30)
                         .cornerRadius(7)
                         .offset(x: 15)
                     
-                    Image(user[(0...9).randomElement()!].profilePicture)
+                    Image(randomUser[2].profilePicture)
                         .resizable()
                         .scaledToFill()
                         .frame(width: 30, height: 30)
@@ -125,7 +140,7 @@ struct PostsView: View {
                 }
                 
                 Text("\(post.likes) Likes")
-                    .padding(.leading, 35)
+                    .padding(.leading, 30)
                     .font(.fontUtil(.bold, size: 20))
                 
                 Spacer()
@@ -162,7 +177,7 @@ struct PostsView: View {
                 let size = proxy.size
                 
                 Rectangle()
-                    .stroke(.black.opacity(0.5), lineWidth: 0.3)
+                    .stroke(colorScheme == .light ? .black.opacity(0.5) : .gray, lineWidth: 0.3)
                     .frame(width: size.width, height: 1)
             }
             .padding(.horizontal)
@@ -171,9 +186,12 @@ struct PostsView: View {
 }
 
 struct PostsView_Previews: PreviewProvider {
+    var viewModel: HomeViewModel
+    
     static var previews: some View {
         PostsView(post: Post(id: 4, userID: 6, likes: "742,621", postPicture: "5", caption: """
                              Tomorrow is weekend!👻
-                             """, time: "3 hours ago"), user: mockedUsers)
+                             """, time: "3 hours ago"), user: mockedUsers, randomUser: [mockedUsers.randomElement()!, mockedUsers.randomElement()!, mockedUsers.randomElement()!])
+           // .preferredColorScheme(.dark)
     }
 }

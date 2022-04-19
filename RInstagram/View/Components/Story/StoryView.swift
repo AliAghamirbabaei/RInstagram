@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct StoryView: View {
+    @Environment(\.colorScheme) var colorScheme
     var viewModel: HomeViewModel
     
     var body: some View {
@@ -15,10 +16,10 @@ struct StoryView: View {
         ScrollView(.horizontal, showsIndicators: false) {
         HStack {
             VStack {
-                RoundedRectangle(cornerRadius: 15)
+                RoundedRectangle(cornerRadius: 17)
                     .frame(width: 70, height: 70)
                     .foregroundColor(.white)
-                    .shadow(color: .black.opacity(0.15), radius: 12, x: 0, y: 13)
+                    .shadow(color: colorScheme == .light ? .black.opacity(0.15) : .gray.opacity(0.5), radius: 12, x: 0, y: 13)
                     .overlay(
                         Image("Plus")
                             .resizable()
@@ -30,6 +31,7 @@ struct StoryView: View {
                     .foregroundColor(Color("Pink"))
             }
             .padding(10)
+            .padding(.leading, 10)
             
             // MARK: - Stories
                 HStack {

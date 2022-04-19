@@ -9,6 +9,7 @@ import SwiftUI
 
 struct HomeView: View {
     @EnvironmentObject var viewModel: HomeViewModel
+    @Environment(\.colorScheme) var colorScheme
     @State private var dotSize: CGFloat = 0.0
     @State private var isReversed: Bool = false
     private let timer = Timer.publish(every: 0.2, on: .main, in: .common).autoconnect()
@@ -27,7 +28,7 @@ struct HomeView: View {
                         let size = proxy.size
                         
                         Rectangle()
-                            .stroke(.black.opacity(0.5), lineWidth: 0.22)
+                            .stroke(colorScheme == .light ? .black.opacity(0.5) : .gray, lineWidth: 0.22)
                             .frame(width: size.width, height: 1)
                     }
                     
@@ -36,7 +37,7 @@ struct HomeView: View {
             }
             .navigationTitle("Instagram")
             .navigationBarTitleDisplayMode(.inline)
-            // MARK: - Tabbar items
+            // MARK: Tabbar items
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
                     Button {
