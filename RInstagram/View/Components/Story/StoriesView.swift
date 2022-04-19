@@ -15,14 +15,14 @@ struct StoriesView: View {
         VStack {
             ZStack {
                 if story.isSeen {
-                    RoundedRectangle(cornerRadius: 15)
+                    RoundedRectangle(cornerRadius: 17)
                         .strokeBorder(
                             .gray.opacity(0.4),
                             lineWidth: 3
                         )
                         .frame(width: 70, height: 70)
                 } else {
-                    RoundedRectangle(cornerRadius: 15)
+                    RoundedRectangle(cornerRadius: 17)
                         .strokeBorder(
                             LinearGradient(gradient: Gradient(colors: [Color("Insta-Gradient-First"), Color("Insta-Gradient-Second")]), startPoint: .topLeading, endPoint: .bottomTrailing),
                             lineWidth: 3
