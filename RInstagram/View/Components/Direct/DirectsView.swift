@@ -103,7 +103,7 @@ struct DirectsView: View {
             isReversed = true
         }
         
-        if dotSize < 5 {
+        if dotSize < 7 {
             isReversed = false
         }
     }
