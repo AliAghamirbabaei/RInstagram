@@ -118,20 +118,20 @@ struct PostsView: View {
             // MARK: - Post insights
             HStack {
                 ZStack {
-                    Image(randomUser[0].profilePicture)
+                    Image(post.whoLiked[0].profilePicture)
                         .resizable()
                         .scaledToFill()
                         .frame(width: 30, height: 30)
                         .cornerRadius(7)
                     
-                    Image(randomUser[1].profilePicture)
+                    Image(post.whoLiked[1].profilePicture)
                         .resizable()
                         .scaledToFill()
                         .frame(width: 30, height: 30)
                         .cornerRadius(7)
                         .offset(x: 15)
                     
-                    Image(randomUser[2].profilePicture)
+                    Image(post.whoLiked[2].profilePicture)
                         .resizable()
                         .scaledToFill()
                         .frame(width: 30, height: 30)
@@ -189,7 +189,7 @@ struct PostsView_Previews: PreviewProvider {
     var viewModel: HomeViewModel
     
     static var previews: some View {
-        PostsView(post: Post(id: 4, userID: 6, likes: "742,621", postPicture: "5", caption: """
+        PostsView(post: Post(id: 4, userID: 6, likes: "742,621", whoLiked: [mockedUsers[3], mockedUsers[4], mockedUsers[1]], postPicture: "5", caption: """
                              Tomorrow is weekend!👻
                              """, time: "3 hours ago"), user: mockedUsers, randomUser: [mockedUsers.randomElement()!, mockedUsers.randomElement()!, mockedUsers.randomElement()!])
            // .preferredColorScheme(.dark)

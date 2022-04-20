@@ -11,6 +11,7 @@ struct Post {
     var id: Int
     var userID: Int
     var likes: String
+    var whoLiked: [User]
     var postPicture: String
     var caption: String
     var time: String

@@ -20,35 +20,33 @@ class HomeViewModel: ObservableObject {
                    Story(id: 4, userID: 7, isSeen: false),
                    Story(id: 5, userID: 8, isSeen: true),
                    Story(id: 6, userID: 9, isSeen: false)]
-        stories.shuffle()
         
-        posts = [Post(id: 0, userID: 4, likes: "323", postPicture: "1", caption: """
+        posts = [Post(id: 0, userID: 4, likes: "323", whoLiked: [mockedUsers[2], mockedUsers[1], mockedUsers[3]], postPicture: "1", caption: """
         Happy Sunday lovelies ❤️❤️
         """, time: "5 hours ago"),
-                 Post(id: 1, userID: 2, likes: "4", postPicture: "2", caption: """
+                 Post(id: 1, userID: 2, likes: "4", whoLiked: [mockedUsers[5], mockedUsers[1], mockedUsers[7]], postPicture: "2", caption: """
                              Dark Side of the Moon
                              """, time: "1 hours ago"),
-                 Post(id: 2, userID: 8, likes: "41,231", postPicture: "3", caption: """
+                 Post(id: 2, userID: 8, likes: "41,231", whoLiked: [mockedUsers[9], mockedUsers[0], mockedUsers[3]], postPicture: "3", caption: """
                              Summer nights...
                              """, time: "32 minutes ago"),
-                 Post(id: 3, userID: 1, likes: "235", postPicture: "4", caption: """
+                 Post(id: 3, userID: 1, likes: "235", whoLiked: [mockedUsers[4], mockedUsers[5], mockedUsers[6]], postPicture: "4", caption: """
                              """, time: "1 day ago"),
-                 Post(id: 4, userID: 6, likes: "742,621", postPicture: "5", caption: """
+                 Post(id: 4, userID: 6, likes: "742,621", whoLiked: [mockedUsers[8], mockedUsers[9], mockedUsers[0]], postPicture: "5", caption: """
                              Tomorrow is weekend!👻
                              """, time: "3 hours ago"),
-                 Post(id: 5, userID: 3, likes: "21,231", postPicture: "6", caption: """
+                 Post(id: 5, userID: 3, likes: "21,231", whoLiked: [mockedUsers[2], mockedUsers[4], mockedUsers[3]], postPicture: "6", caption: """
                              Never forget your self...
                              """, time: "8 hours ago"),
-                 Post(id: 6, userID: 5, likes: "4,171", postPicture: "7", caption: """
+                 Post(id: 6, userID: 5, likes: "4,171", whoLiked: [mockedUsers[0], mockedUsers[3], mockedUsers[8]], postPicture: "7", caption: """
                              Hoje é meu aniversário ❤️🥳
                              """, time: "12 minutes ago"),
-                 Post(id: 7, userID: 5, likes: "5,331", postPicture: "8", caption: """
+                 Post(id: 7, userID: 5, likes: "5,331", whoLiked: [mockedUsers[9], mockedUsers[1], mockedUsers[6]], postPicture: "8", caption: """
                              Tag your BFF 🤍
                              """, time: "54 minutes ago"),
-                 Post(id: 8, userID: 3, likes: "25,681", postPicture: "9", caption: """
+                 Post(id: 8, userID: 3, likes: "25,681", whoLiked: [mockedUsers[4], mockedUsers[3], mockedUsers[7]], postPicture: "9", caption: """
                              Hi! 😊💫
                              """, time: "3 days ago")]
-        posts.shuffle()
     }
     
     public func getRandomUser() -> [User] {

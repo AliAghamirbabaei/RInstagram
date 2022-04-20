@@ -13,7 +13,5 @@ class DirectViewModel: ObservableObject {
     
     init() {
         directMessages = mockedDirects
-        
-        directMessages.shuffle()
     }
 }
