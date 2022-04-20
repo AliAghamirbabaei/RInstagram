@@ -21,8 +21,13 @@
 		302B8A69280CFE9F00D7ED9E /* StoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302B8A68280CFE9E00D7ED9E /* StoryView.swift */; };
 		302B8A6D280DCEDC00D7ED9E /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302B8A6C280DCEDC00D7ED9E /* PostModel.swift */; };
 		302B8A70280E1E2700D7ED9E /* PostsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302B8A6F280E1E2700D7ED9E /* PostsView.swift */; };
-		30BBD54E280E37D00080F1CF /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BBD54D280E37D00080F1CF /* Extension.swift */; };
+		30BBD54E280E37D00080F1CF /* Range+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BBD54D280E37D00080F1CF /* Range+Ext.swift */; };
 		30BBD550280E3A360080F1CF /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BBD54F280E3A360080F1CF /* PostView.swift */; };
+		30C0884E2810107000C9F7A1 /* DirectModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C0884D2810107000C9F7A1 /* DirectModel.swift */; };
+		30C088502810114300C9F7A1 /* DirectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C0884F2810114300C9F7A1 /* DirectView.swift */; };
+		30C088532810168700C9F7A1 /* DirectsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C088522810168700C9F7A1 /* DirectsView.swift */; };
+		30C088552810194C00C9F7A1 /* DirectViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C088542810194C00C9F7A1 /* DirectViewModel.swift */; };
+		30C088572810200000C9F7A1 /* View+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C088562810200000C9F7A1 /* View+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,8 +47,13 @@
 		302B8A68280CFE9E00D7ED9E /* StoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryView.swift; sourceTree = "<group>"; };
 		302B8A6C280DCEDC00D7ED9E /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
 		302B8A6F280E1E2700D7ED9E /* PostsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsView.swift; sourceTree = "<group>"; };
-		30BBD54D280E37D00080F1CF /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		30BBD54D280E37D00080F1CF /* Range+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Range+Ext.swift"; sourceTree = "<group>"; };
 		30BBD54F280E3A360080F1CF /* PostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
+		30C0884D2810107000C9F7A1 /* DirectModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectModel.swift; sourceTree = "<group>"; };
+		30C0884F2810114300C9F7A1 /* DirectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectView.swift; sourceTree = "<group>"; };
+		30C088522810168700C9F7A1 /* DirectsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectsView.swift; sourceTree = "<group>"; };
+		30C088542810194C00C9F7A1 /* DirectViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectViewModel.swift; sourceTree = "<group>"; };
+		30C088562810200000C9F7A1 /* View+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				302B8A4C280CB95600D7ED9E /* HomeView.swift */,
+				30C0884F2810114300C9F7A1 /* DirectView.swift */,
 				302B8A55280CC66E00D7ED9E /* Components */,
 			);
 			path = View;
@@ -117,6 +128,7 @@
 		302B8A55280CC66E00D7ED9E /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				30C088512810167A00C9F7A1 /* Direct */,
 				302B8A6E280E1DFA00D7ED9E /* Post */,
 				302B8A67280CFE7500D7ED9E /* Story */,
 			);
@@ -129,6 +141,7 @@
 				302B8A5A280CC6D300D7ED9E /* UserModel.swift */,
 				302B8A60280CC7BC00D7ED9E /* StoryModel.swift */,
 				302B8A6C280DCEDC00D7ED9E /* PostModel.swift */,
+				30C0884D2810107000C9F7A1 /* DirectModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -137,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				302B8A62280CC8C200D7ED9E /* HomeViewModel.swift */,
+				30C088542810194C00C9F7A1 /* DirectViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -144,7 +158,8 @@
 		302B8A64280CCB8C00D7ED9E /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				30BBD54D280E37D00080F1CF /* Extension.swift */,
+				30BBD54D280E37D00080F1CF /* Range+Ext.swift */,
+				30C088562810200000C9F7A1 /* View+Ext.swift */,
 				302B8A4F280CC3E800D7ED9E /* Fonts */,
 				302B8A65280CCC8300D7ED9E /* Font+Ext.swift */,
 			);
@@ -167,6 +182,14 @@
 				302B8A6F280E1E2700D7ED9E /* PostsView.swift */,
 			);
 			path = Post;
+			sourceTree = "<group>";
+		};
+		30C088512810167A00C9F7A1 /* Direct */ = {
+			isa = PBXGroup;
+			children = (
+				30C088522810168700C9F7A1 /* DirectsView.swift */,
+			);
+			path = Direct;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -241,16 +264,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30C088572810200000C9F7A1 /* View+Ext.swift in Sources */,
 				302B8A3F280CB90A00D7ED9E /* RInstagramApp.swift in Sources */,
 				302B8A6D280DCEDC00D7ED9E /* PostModel.swift in Sources */,
 				302B8A66280CCC8300D7ED9E /* Font+Ext.swift in Sources */,
+				30C0884E2810107000C9F7A1 /* DirectModel.swift in Sources */,
 				302B8A63280CC8C200D7ED9E /* HomeViewModel.swift in Sources */,
-				30BBD54E280E37D00080F1CF /* Extension.swift in Sources */,
+				30BBD54E280E37D00080F1CF /* Range+Ext.swift in Sources */,
 				302B8A4D280CB95600D7ED9E /* HomeView.swift in Sources */,
+				30C088552810194C00C9F7A1 /* DirectViewModel.swift in Sources */,
 				302B8A5B280CC6D300D7ED9E /* UserModel.swift in Sources */,
 				302B8A57280CC69D00D7ED9E /* StoriesView.swift in Sources */,
 				302B8A61280CC7BC00D7ED9E /* StoryModel.swift in Sources */,
 				302B8A70280E1E2700D7ED9E /* PostsView.swift in Sources */,
+				30C088502810114300C9F7A1 /* DirectView.swift in Sources */,
+				30C088532810168700C9F7A1 /* DirectsView.swift in Sources */,
 				30BBD550280E3A360080F1CF /* PostView.swift in Sources */,
 				302B8A69280CFE9F00D7ED9E /* StoryView.swift in Sources */,
 			);
