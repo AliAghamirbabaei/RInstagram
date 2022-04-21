@@ -192,6 +192,5 @@ struct PostsView_Previews: PreviewProvider {
         PostsView(post: Post(id: 4, userID: 6, likes: "742,621", whoLiked: [mockedUsers[3], mockedUsers[4], mockedUsers[1]], postPicture: "5", caption: """
                              Tomorrow is weekend!👻
                              """, time: "3 hours ago"), user: mockedUsers, randomUser: [mockedUsers.randomElement()!, mockedUsers.randomElement()!, mockedUsers.randomElement()!])
-           // .preferredColorScheme(.dark)
     }
 }
