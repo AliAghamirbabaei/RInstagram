@@ -52,7 +52,7 @@ struct HomeView: View {
                 
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button {
-                        // Open Camera
+                        // Open Direct
                     } label: {
                         ZStack {
                             Image("Message")

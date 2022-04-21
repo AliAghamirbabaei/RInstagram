@@ -48,7 +48,7 @@ struct DirectsView: View {
                 VStack(alignment: .leading) {
                     Text(mockedUsers[direct.userID].username)
                         .font(.fontUtil(.bold, size: 24))
-                        .padding(.bottom, 3)
+                        .padding(.bottom, 1)
                     
                     Text(direct.message)
                         .font(.fontUtil(.regular, size: 18))
@@ -77,7 +77,7 @@ struct DirectsView: View {
             VStack {
                 if direct.isUnreadMessage {
                     Rectangle()
-                        .fill(colorScheme == .light ? .white : .black)
+                        .fill(Color("DirectUnreadBG"))
                         .cornerRadius(12, corners: [.topRight, .topLeft, .bottomRight])
                         .padding(.trailing)
                         .shadow(color: .black.opacity(0.15), radius: 12, x: 0, y: 13)

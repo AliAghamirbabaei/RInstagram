@@ -22,7 +22,7 @@ struct DirectView: View {
                     ScrollView(showsIndicators: false) {
                         HStack {
                             Text("messages")
-                                .font(.fontUtil(.bold, size: 30))
+                                .font(.fontUtil(.bold, size: 32))
                             
                             Spacer()
                         }
